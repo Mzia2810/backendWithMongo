@@ -21,6 +21,7 @@ app.use(express.urlencoded({
 app.use(errorHandler)
 
 // getting routes for api from router
-app.use('/test/goals',require('./routes/testRoute'))
+app.use('/api/goals',require('./routes/goalRoutes'))
+app.use('/api/users',require('./routes/userRoutes'))
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
